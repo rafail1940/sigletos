@@ -199,7 +199,7 @@ h2.ho1{font-size: clamp(2.0rem, 4.0vw, 4.0rem);
 
 .button{
     border:0;
-    font:800 .82rem Manrope;
+    font:800 .82rem 'Roboto Flex', Arial, sans-serif;
     display:inline-flex;
     align-items:center;
     gap:1.2rem;
@@ -237,11 +237,11 @@ h2.ho1{font-size: clamp(2.0rem, 4.0vw, 4.0rem);
 
 .hero-stats div{
     display:grid;
-    gap:.2rem;
+    gap:2.5rem;
 }
 
 .hero-stats strong{
-    font:700 1.35rem 'Space Grotesk';
+    font:700 1.20rem 'Roboto Flex', Arial, sans-serif;
 }
 
 .hero-stats span{
@@ -257,7 +257,7 @@ h2.ho1{font-size: clamp(2.0rem, 4.0vw, 4.0rem);
     white-space:nowrap;
     overflow:hidden;
     padding:14px 0;
-    font:800 .77rem 'Space Grotesk';
+    font:800 .77rem 'Roboto Flex', Arial, sans-serif;
     letter-spacing:.07em;
     width:100%;
 }
@@ -378,7 +378,7 @@ transition-delay:.59s;
 }
 
 .course-card h3{
-    font:700 2rem 'Space Grotesk';
+    font:700 2rem 'Roboto Flex', Arial, sans-serif;
     letter-spacing:-.06em;
     margin:0;
 }
@@ -473,12 +473,12 @@ transition-delay:.30s;
 }
 
 .steps li>span{
-    font:600 1rem 'Space Grotesk';
+    font:600 1rem 'Roboto Flex', Arial, sans-serif;
     color:var(--lime);
 }
 
 .steps h3{
-    font:700 1.7rem 'Space Grotesk';
+    font:700 1.7rem 'Roboto Flex', Arial, sans-serif;
     letter-spacing:-.05em;
     margin:0 0 .3rem;
 }
@@ -514,8 +514,8 @@ transition-delay:.30s;
 }
 
 blockquote{
-    font:600 clamp(1.15rem,2vw,1.65rem)/1.55 'Space Grotesk';
-    letter-spacing:-.04em;
+    font:600 clamp(1.15rem,2vw,1.65rem)/1.55 'Roboto Flex', Arial, sans-serif;
+    letter-spacing:-0.05em;
     margin:1.7rem 0 2rem;
 }
 
@@ -723,7 +723,7 @@ blockquote{
     background:transparent;
     padding:.65rem 0;
     color:var(--ink);
-    font:500 .9rem Manrope;
+    font:500 .9rem 'Roboto Flex', Arial, sans-serif;
     outline-color:var(--coral);
 }
 
@@ -759,7 +759,7 @@ blockquote{
     background:transparent;
     padding:.65rem 0;
     color:var(--ink);
-    font:500 .9rem Manrope;
+    font:500 .9rem 'Roboto Flex', Arial, sans-serif;
     outline-color:var(--coral);
 }
 
