@@ -1037,15 +1037,23 @@ footer a:hover{
     left: 10%;
   }
 
-  .hero-stats {
-    margin-top: 3.5rem;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
+  .hero-stats{
+    display:block;
+    width:100%;
+    max-width:none;
+    margin-top:1rem;
+}
 
-  .hero-stats strong {
-    font-size: 1.1rem;
-  }
+.hero-stats > div{
+    width:100%;
+    max-width:none;
+}
+
+.hero-stats strong{
+    display:block;
+    width:100%;
+    white-space:nowrap;
+}
 
   .hero-stats span {
     font-size: 0.55rem;
