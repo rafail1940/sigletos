@@ -1015,7 +1015,13 @@ footer a:hover{
     padding-top: 3.5rem;
     gap: 3rem;
   }
-
+.eyebrow{
+    width:100%;
+    max-width:none;
+    white-space:nowrap;
+    font-size:.65rem;
+    gap:.55rem;
+}
   .hero h1 {
     font-size: clamp(2.4rem, 11vw, 3.2rem);
     line-height: 0.98;
@@ -1262,7 +1268,7 @@ footer a:hover{
    VERY SMALL PHONES
    ========================= */
 
-@media(max-width:480px){
+@media(max-width:400px){
 
     .site-header{
         padding-left:4vw;
@@ -1273,7 +1279,13 @@ footer a:hover{
         padding-left:4vw;
         padding-right:4vw;
     }
-
+    .eyebrow{
+        width:100%;
+        max-width:none;
+        white-space:nowrap;
+        font-size:.55rem;
+        gap:.35rem;
+    }
     .section{
         padding-left:4vw;
         padding-right:4vw;
