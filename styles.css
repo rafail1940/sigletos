@@ -1362,14 +1362,15 @@ footer a:hover{
     footer div{
         flex-wrap:wrap;
     }
-    .bullet1::before {
+    
+
+}
+.bullet1::before {
     content: "•";
     color:var(--ink);
     font-size: 20px;
     margin-right: 8px
     }
-
-}
 .bullet::before {
     content: "•";
     color:var(--lime);
