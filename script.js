@@ -65,7 +65,7 @@ messageElement.textContent = 'Αποστολή μηνύματος...';
 
 try{
 
-const response = await fetch('https://formspree.io/f/xrpgzwln',{
+const response = await fetch('https://formspree.io/f/meaedwek',{
 method:'POST',
 body:formData,
 headers:{
