@@ -47,68 +47,49 @@ otherCourse.value = '';
 
 // ΑΠΟΣΤΟΛΗ ΦΟΡΜΑΣ
 
-const contactForm = document.querySelector('.contact-form');
+const contactForms = document.querySelectorAll('.js-contact-form');
 
-if(contactForm){
+contactForms.forEach(form => {
+    form.addEventListener('submit', async event => {
+        event.preventDefault();
 
-contactForm.addEventListener('submit', async event => {
+        const messageElement = form.querySelector('.form-message');
+        const formData = new FormData(form);
 
-event.preventDefault();
+        if (messageElement) {
+            messageElement.textContent = 'Αποστολή μηνύματος...';
+        }
 
-const form = event.currentTarget;
-const messageElement = form.querySelector('.form-message');
-const formData = new FormData(form);
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    Accept: 'application/json'
+                }
+            });
 
-if(messageElement){
-messageElement.textContent = 'Αποστολή μηνύματος...';
-}
+            if (response.ok) {
+                if (messageElement) {
+                    messageElement.textContent =
+                        'Τέλεια! Θα επικοινωνήσουμε μαζί σου πολύ σύντομα.';
+                }
 
-try{
-
-const response = await fetch('https://formspree.io/f/meaedwek',{
-method:'POST',
-body:formData,
-headers:{
-'Accept':'application/json'
-}
+                form.reset();
+            } else {
+                if (messageElement) {
+                    messageElement.textContent =
+                        'Κάτι πήγε στραβά. Παρακαλώ δοκιμάστε ξανά.';
+                }
+            }
+        } catch (error) {
+            if (messageElement) {
+                messageElement.textContent =
+                    'Κάτι πήγε στραβά. Παρακαλώ δοκιμάστε ξανά.';
+            }
+        }
+    });
 });
-
-if(response.ok){
-
-if(messageElement){
-messageElement.textContent =
-'Τέλεια! Θα επικοινωνήσουμε μαζί σου πολύ σύντομα.';
-}
-
-form.reset();
-
-if(otherCourseWrapper && otherCourse){
-otherCourseWrapper.style.display = 'none';
-otherCourse.required = false;
-otherCourse.value = '';
-}
-
-}else{
-
-if(messageElement){
-messageElement.textContent =
-'Κάτι πήγε στραβά. Παρακαλώ δοκιμάστε ξανά αργότερα.';
-}
-
-}
-
-}catch(error){
-
-if(messageElement){
-messageElement.textContent =
-'Κάτι πήγε στραβά. Παρακαλώ δοκιμάστε ξανά αργότερα.';
-}
-
-}
-
-});
-
-}
 
 
 // ANIMATION COURSE CARDS
